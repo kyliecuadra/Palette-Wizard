@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palette Wizard</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/img/icon.png">
+</head>
+
+<body>
+    <div class="container">
+        <img src="assets/img/logo.png" alt="logo" class="logo">
+
+        <h1 class="intro" id="intro">PRESS <img src="assets/img/spacebar.png"> TO GENERATE PALETTE</h1>
+
+        <div id="main" hidden>
+        <div class="cards" id="palette">
+            <div class="card">
+                <div class="canvas"></div>
+                <div class="hex">#999999</div>
+            </div>
+            <div class="card">
+                <div class="canvas"></div>
+                <div class="hex">#777777</div>
+            </div>
+            <div class="card">
+                <div class="canvas"></div>
+                <div class="hex">#555555</div>
+            </div>
+            <div class="card">
+                <div class="canvas"></div>
+                <div class="hex">#333333</div>
+            </div>
+            <div class="card">
+                <div class="canvas"></div>
+                <div class="hex">#777777</div>
+            </div>
+        </div>
+        <button class="btn" id="downloadTxt">Download Hex Codes</button>
+        <button class="btn" id="downloadPng">Download Palette as PNG</button>
+    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

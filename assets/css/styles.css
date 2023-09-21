@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.intro {
+  font-size: 100px;
+  color: #7C7C84;
+}
+
+.intro img {
+  height: 80px;
+}
+
+.container .logo {
+  width: 450px;
+}
+
+.container .cards .card:nth-of-type(1) .canvas,
+.container .cards .card:nth-of-type(2) .canvas,
+.container .cards .card:nth-of-type(3) .canvas,
+.container .cards .card:nth-of-type(4) .canvas,
+.container .cards .card:nth-of-type(5) .canvas {
+  height: 11rem;
+  width: 8rem;
+  border-radius: 2px;
+  transition: 0.3s ease all;
+}
+
+.container .cards .card:nth-of-type(1) .hex,
+.container .cards .card:nth-of-type(2) .hex,
+.container .cards .card:nth-of-type(3) .hex,
+.container .cards .card:nth-of-type(4) .hex,
+.container .cards .card:nth-of-type(5) .hex {
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body,
+.container .cards,
+.container .cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  background-color: #ebebf3;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.container .cards {
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.container .cards .card {
+  height: 14.5rem;
+  width: 9rem;
+  margin: 1rem 1.5rem;
+  background-color: #fff;
+  flex-direction: column;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+
+.container .cards .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 12px #a3b2c2;
+}
+
+.container .cards .card:nth-of-type(1) .canvas {
+  background-color: #999999;
+}
+
+.container .cards .card:nth-of-type(1) .hex {
+  color: #7c7c84;
+}
+
+.container .cards .card:nth-of-type(2) .canvas {
+  background-color: #777777;
+}
+
+.container .cards .card:nth-of-type(2) .hex {
+  color: #7c7c84;
+}
+
+.container .cards .card:nth-of-type(3) .canvas {
+  background-color: #555555;
+}
+
+.container .cards .card:nth-of-type(3) .hex {
+  color: #7c7c84;
+}
+
+.container .cards .card:nth-of-type(4) .canvas {
+  background-color: #333333;
+}
+
+.container .cards .card:nth-of-type(4) .hex {
+  color: #4c545f;
+}
+
+.container .cards .card:nth-of-type(5) .canvas {
+  background-color: #111111;
+}
+
+.container .cards .card:nth-of-type(5) .hex {
+  color: #7c7c84;
+}
+
+.container .btn {
+  margin-top: 3rem;
+  border: none;
+  outline: none;
+  background-color: #db2595;
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem 4rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+.container .btn:hover {
+  background-color: #F02EA7;
+}
