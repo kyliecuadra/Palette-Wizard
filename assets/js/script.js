@@ -13,11 +13,41 @@ document.addEventListener('DOMContentLoaded', () => {
         cards.forEach((card, index) => {
             if (index < numColors) {
                 const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-                card.querySelector('.canvas').style.backgroundColor = '#' + randomColor;
-                card.querySelector('.hex').innerHTML = '#' + randomColor;
+                const hexValue = '#' + randomColor;
+                card.querySelector('.canvas').style.backgroundColor = hexValue;
+                card.querySelector('.hex').innerHTML = hexValue;
+
+                // Add click event listener to copy hex value
+                card.addEventListener('click', function() {
+                    const hexText = this.querySelector('.hex').innerHTML;
+                    const tempInput = document.createElement('input');
+                    tempInput.value = hexText;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+
+                    // Display toast notification
+                    const toast = document.createElement('div');
+                    toast.classList.add('toast');
+                    toast.innerText = `Copied ${hexText} to clipboard!`;
+                    document.body.appendChild(toast);
+
+                    setTimeout(() => {
+                        toast.style.opacity = '1';
+                    }, 100);
+
+                    setTimeout(() => {
+                        toast.style.opacity = '0';
+                        setTimeout(() => {
+                            document.body.removeChild(toast);
+                        }, 300);
+                    }, 3000);
+                });
             } else {
                 card.querySelector('.canvas').style.backgroundColor = '#ffffff';
-                card.querySelector('.hex').innerHTML = '#ffffff';
+                card.querySelector('.hex').innerHTML ='#ffffff';
+                card.removeEventListener('click', function() {});
             }
         });
     };
