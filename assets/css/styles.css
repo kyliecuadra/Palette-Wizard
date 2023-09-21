@@ -139,3 +139,17 @@ body {
 .container .btn:hover {
   background-color: #F02EA7;
 }
+
+.toast {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.8rem 1.5rem;
+    background-color: #1fa449;
+    color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
